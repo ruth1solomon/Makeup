@@ -7,6 +7,7 @@ const EditAppointmentModal = ({ currentAppointment, showEditModal, setShowEditMo
     const [date, setDate] = useState('');
     const [time, setTime] = useState('');
     const [service, setService] = useState('');
+    const[payment, setPayment]=useState('');
 
     // Update the form fields when currentAppointment changes
     useEffect(() => {
@@ -16,6 +17,7 @@ const EditAppointmentModal = ({ currentAppointment, showEditModal, setShowEditMo
             setDate(currentAppointment.date);
             setTime(currentAppointment.time);
             setService(currentAppointment.service);
+            setPayment(currentAppointment.payment);
         }
     }, [currentAppointment]);
 
@@ -28,6 +30,7 @@ const EditAppointmentModal = ({ currentAppointment, showEditModal, setShowEditMo
                 date,
                 time,
                 service,
+                payment,
             });
             fetchAppointments(); // Refresh the appointments list after update
             setShowEditModal(false); // Close the modal
@@ -87,6 +90,15 @@ const EditAppointmentModal = ({ currentAppointment, showEditModal, setShowEditMo
                             <option value="Bridal Makeup">Bridal Makeup</option>
                             <option value="Natural Makeup">Natural Makeup</option>
                         </select>
+                    </div>
+                    <div className="mb-4">
+                        <label className="block text-black">Payment</label>
+                        <input
+                            type="text"
+                            value={payment}
+                            onChange={(e) => setPayment(e.target.value)}
+                            className="w-full px-3 py-2 border rounded text-black"
+                        />
                     </div>
                     <button
                         type="button"

@@ -26,6 +26,11 @@ const Navbar = () => {
             className="hover:text-pink-700 cursor-pointer transition duration-300">
             Calendar
           </Link>
+          <Link 
+            to="/done" 
+            className="hover:text-pink-700 cursor-pointer transition duration-300">
+            Done
+          </Link>
         </div>
       </div>
     </nav>
