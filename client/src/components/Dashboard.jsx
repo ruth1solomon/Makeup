@@ -123,19 +123,19 @@ const Dashboard = () => {
                 <td className="p-4">{appointment.status}</td>
                 <td className="p-4">
                   <button 
-                    className="bg-pink-500 p-2 rounded mx-2"
+                    className="bg-pink-500 p-1 rounded mx-2 my-1"
                     onClick={() => handleMarkAsDone(appointment._id)}
                   >
-                    Mark as Done
+                    Done
                   </button>
                   <button
-                    className="bg-pink-500 p-2 rounded mx-2"
+                    className="bg-pink-500 p-1 rounded mx-2 my-1"
                     onClick={() => handleEditClick(appointment)}
                   >
                     Edit
                   </button>
                   <button 
-                    className="bg-pink-500 p-2 rounded mx-2"
+                    className="bg-pink-500 p-1 rounded mx-2 my-1"
                     onClick={() => handleDelete(appointment._id)}
                   >
                     Cancel
