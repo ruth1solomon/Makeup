@@ -10,7 +10,7 @@ require('dotenv').config();
 
 
 // Connect to MongoDB
-mongoose.connect('mongodb+srv://ruthwoldesemait:RuthWoldesemait@cluster0.43voo.mongodb.net/Makeup?tls=true&tlsInsecure=true', )
+mongoose.connect(process.env.MONGO_URI,)
     .then(() => console.log('MongoDB connected'))
     .catch(err => console.error(err));
 // Routes
